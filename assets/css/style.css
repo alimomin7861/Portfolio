@@ -1,0 +1,123 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles for header and navigation */
+header {
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Styles for sections */
+section {
+  padding: 40px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Styles for the developer's avatar */
+.avatar {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 20px auto;
+}
+
+/* Styles for the applications section */
+.applications {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.app-tile {
+  position: relative;
+}
+
+.app-label {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff7f50;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.app-tile:hover .app-label {
+  opacity: 1;
+}
+
+.app-image {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.app-image.large {
+  width: 300px;
+  height: 300px;
+}
+
+.app-image:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
+
+  .app-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* Adjust section padding for smaller screens */
+  section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .app-image {
+    width: 120px;
+    height: 120px;
+  }
+}
